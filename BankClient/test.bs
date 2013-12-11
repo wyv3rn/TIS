@@ -1,0 +1,33 @@
+dumpDBEntries before.txt
+
+createNewCustomer John Doe vs12
+createNewCustomer Jane Doe vs12
+createNewCustomer Max Mustermann vs12
+createNewCustomer John Wayne vs12
+
+
+createNewCustomer Erika Musterfrau vs13
+createNewCustomer Erik Mustermann vs13
+createNewCustomer Max Musterman vs13
+createNewCustomer Maria Musterfrau vs13
+
+deposit 0 1024.0 vs12
+
+remittance 1 vs12 0 vs12 512.0
+remittance 2 vs12 1 vs12 256.0
+remittance 3 vs12 2 vs12 128.0
+
+remittance 0 vs13 3 vs12 64.0
+
+remittance 1 vs13 0 vs13 32.0
+remittance 2 vs13 1 vs13 16.0
+remittance 3 vs13 2 vs13 8.0
+
+createNewAccount 0 vs12
+createNewAccount 0 vs12
+
+dumpDBEntries meanwhile.txt
+
+deleteCustomer 0 vs12
+
+dumpDBEntries after.txt
